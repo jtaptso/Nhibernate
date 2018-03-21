@@ -1,0 +1,23 @@
+﻿<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2">
+  <class name="NhibernateMappings.Address, NhibernateTutorial" table="[Address]" dynamic-insert="true">
+    <id name="Id" type="Int32" unsaved-value="0">
+      <column name="Id" sql-type="INT"/>
+      <generator class="native"/>
+    </id>
+    <property name="Address1" typpe="string">
+      <column name="Address1" sql-type="VARCHAR(255)" not-null="true"/>
+    </property>
+    <property name="Address2" typpe="string">
+      <column name="Address2" sql-type="VARCHAR(255)" not-null="false"/>
+    </property>
+    <property name="City" typpe="string">
+      <column name="City" sql-type="VARCHAR(255)" not-null="true"/>
+    </property>
+    <property name="State" typpe="string">
+      <column name="State" sql-type="VARCHAR(255)" not-null="true"/>
+    </property>
+    <property name="Zipcode" typpe="string">
+      <column name="Zipcode" sql-type="VARCHAR(255)" not-null="true"/>
+    </property>
+  </class>
+</hibernate-mapping>
